@@ -73,7 +73,7 @@ const Product = () => {
           <p className="lead">{Product.drisciption}</p>
          
           <button className="btn btn-outline-dark ms-5 mt-2 mb-2"  onClick={()=>{addProduct(product)}}>Add To Cart</button>
-          <button className="btn btn-outline-dark bg-primary ms-2 mt-2 mb-2" to="/cart">Go To Cart</button>
+          <NavLink className="btn btn-outline-dark bg-primary ms-2 mt-2 mb-2" to="/cart">Go To Cart</NavLink>
           
         </div>
       </>

@@ -55,7 +55,7 @@ const Navbar = () => {
               <NavLink to="" className="btn btn-outline-dark bg-primary  me-2">
                 <i className="fa fa-user-plus me-1"></i>Register
               </NavLink>
-              <NavLink to="" className="btn btn-outline-dark bg-primary" to="/cart">
+              <NavLink className="btn btn-outline-dark bg-primary" to="/cart">
                 <i className="fa fa-cart-plus me-1"></i>Cart({
                   cart.length
                 })
