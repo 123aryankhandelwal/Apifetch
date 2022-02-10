@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
 import { NavLink } from "react-router-dom";
-// import "./product.scss"
 
 const Product = () => {
   const [data, setData] = useState([]);
