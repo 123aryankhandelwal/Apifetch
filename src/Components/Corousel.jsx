@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CarouselData } from "./CarouselData";
+import Product from "./products";
 
 export default function Corousel() {
   const [current, setCurrent] = useState(0);
@@ -13,6 +14,7 @@ export default function Corousel() {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
   return (
+    <>
     <div className="carousel">
       {CarouselData.map((slide, index) => {
         return (
@@ -34,5 +36,7 @@ export default function Corousel() {
         &gt;
       </button>
     </div>
+    <Product />
+    </>
   );
 }

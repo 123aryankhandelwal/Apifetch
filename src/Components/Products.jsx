@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import "./product.scss"
 
 const Product = () => {
@@ -59,8 +59,7 @@ const Product = () => {
           </h2>
         </div>
         <div className="col-md-12 text-center mb-3">
-          <a
-            href="#"
+          <a href="#"
             className="btn btn-outline-dark me-2 mt-2"
             onClick={() => {
               setFilter(data);
@@ -108,25 +107,30 @@ const Product = () => {
         </div>
         {filter.map((product) => {
           return (
-            <div className="col-md-3">
-              <div className="card h-100 text-center p-4" key={product.id}>
-                  <img className="card-img-top" height='250px' alt="{product.title}" src={`${product.image}`} />
-                  <div className="card-body ">
-                    <h6 className="card-title">
-                      Category: {product.category}
-                    </h6>
-                    <br />
-                    <h5 className="d-inline-block fw-bold card-text">${product.price}</h5>
-                    <br />
-                    <Link
+            <div className="col-md-3"  key={product.id}>
+              <div className="card h-100 text-center p-4">
+                <img
+                  className="card-img-top"
+                  height="250px"
+                  alt="{product.title}"
+                  src={`${product.image}`}
+                />
+                <div className="card-body ">
+                  <h6 className="card-title">Category: {product.category}</h6>
+                  <br />
+                  <h5 className="d-inline-block fw-bold card-text">
+                    ${product.price}
+                  </h5>
+                  <br />
+                  <NavLink
                     className="btn btn-outline-dark fw-bold"
-                    to={`/productDetails/${product.id}`}
+                    to={`/Products/${product.id}`}
                   >
                     Buy Now
-                  </Link>
-                  </div>
+                  </NavLink>
                 </div>
               </div>
+            </div>
           );
         })}
       </>
