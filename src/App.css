@@ -1,0 +1,8 @@
+/* navbar */
+.container{
+  background-color: bisque;
+}
+
+.navbar-nav a{
+  font-size:18px;
+}
