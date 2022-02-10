@@ -1,9 +1,6 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 import {addCart} from "../redux/action";
-import Cart from "./Cart";
-import Skeleton from "react-loading-skeleton";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { NavLink, useParams } from "react-router-dom";
 
 const Product = () => {
