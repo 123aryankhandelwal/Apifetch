@@ -1,12 +1,21 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import {addCart} from "../redux/action";
+import Cart from "./Cart";
 import Skeleton from "react-loading-skeleton";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useParams } from "react-router-dom";
 
 const Product = () => {
   const { id } = useParams();
   const [product, setproduct] = useState([]);
   const [loading, setLoading] = useState(false);
+
+
+  const dispatch=useDispatch()
+    const addProduct=(product)=>{
+        dispatch(addCart(product))   
+    }
 
   useEffect(() => {
     const getProducts = async () => {
@@ -63,14 +72,8 @@ const Product = () => {
           <h3 className="display-6 fw-bold my-4">${product.price}</h3>
           <p className="lead">{Product.drisciption}</p>
          
-          <div className="buttons">
-              <NavLink to="" className="btn btn-outline-dark bg-Dark me-2">
-                <i className="fa me-1"></i>Add To Cart
-              </NavLink>
-              <NavLink to="" className="btn btn-outline-dark bg-primary  me-2">
-                <i className="fa me-1"></i>Go To Cart
-              </NavLink>
-            </div>
+          <button className="btn btn-outline-dark ms-5 mt-2 mb-2"  onClick={()=>{addProduct(product)}}>Add To Cart</button>
+          <button className="btn btn-outline-dark bg-primary ms-2 mt-2 mb-2" to="/cart">Go To Cart</button>
           
         </div>
       </>

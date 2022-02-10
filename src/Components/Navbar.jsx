@@ -1,16 +1,18 @@
 import React from "react";
+import { useSelector } from "react-redux";
 // import "./navbar.scss"
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const cart= useSelector((state) => state.cart);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-primary bg-dark shadow-sm py-3">
         <div className="container ">
-          <Link className="navbar-brand fw-bold" to="/">
+          <NavLink className="navbar-brand fw-bold" to="/">
             QUICK-STORE
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,38 +27,40 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto  mb-lg-0">
               <li className="nav-item ">
-                <Link className="nav-link" to="/">
+                <NavLink className="nav-link" to="/">
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item ">
-                <Link className="nav-link" to="/products">
+                <NavLink className="nav-link" to="/products">
                   Products
-                </Link>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <NavLink className="nav-link" to="/about">
                   About
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item ">
-                <Link className="nav-link " to="/content">
+                <NavLink className="nav-link " to="/content">
                   Contact
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <div className="buttons">
-              <Link to="" className="btn btn-outline-dark bg-primary me-2">
+              <NavLink to="" className="btn btn-outline-dark bg-primary me-2">
                 <i className="fa fa-sign-in me-1"></i>Login
-              </Link>
-              <Link to="" className="btn btn-outline-dark bg-primary  me-2">
+              </NavLink>
+              <NavLink to="" className="btn btn-outline-dark bg-primary  me-2">
                 <i className="fa fa-user-plus me-1"></i>Register
-              </Link>
-              <Link to="" className="btn btn-outline-dark bg-primary" to="/cart">
-                <i className="fa fa-cart-plus me-1"></i>Cart{" "}
+              </NavLink>
+              <NavLink to="" className="btn btn-outline-dark bg-primary" to="/cart">
+                <i className="fa fa-cart-plus me-1"></i>Cart({
+                  cart.length
+                })
                 {/* <span className="fw-bold fs-6">{cart.length}</span>{" "} */}
-              </Link>
+              </NavLink>
             </div>
           </div>
         </div>

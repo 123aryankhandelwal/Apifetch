@@ -29,10 +29,10 @@ export default function Corousel() {
           </div>
         );
       })}
-      <button className="left-button" onClick={prev}>
+      <button id="button1" className="left-button" onClick={prev}>
         &lt;
       </button>
-      <button className="right-button" onClick={next}>
+      <button id="button2" className="right-button" onClick={next}>
         &gt;
       </button>
     </div>

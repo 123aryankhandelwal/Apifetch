@@ -1,11 +1,3 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  
-} */
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -25,7 +17,7 @@ body{
 }
 
 .carousel{
-  width: 1600px;
+  width: 700px;
   height: 500px;
   display: flex;
   align-items: center;
@@ -41,12 +33,12 @@ body{
   
 }
 
-button{
+#button1{
   width: 50px;
   height: 50px;
   background-color: #777;
   color: #000;
-  font-size: 3rem;
+  font-size: 2rem;
   border-radius: 50%;
   border: none;
   text-align: center;
@@ -54,21 +46,26 @@ button{
   cursor: pointer;
   z-index: 1;
   user-select: none;
+  left: 5%;
 }
-
+#button2{
+  width: 50px;
+  height: 50px;
+  background-color: #777;
+  color: #000;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
+  right: 5%;
+}
 button:hover{
   transform: scale(0.95);
 }
-
-.left-button{
-  left: 5%;
-}
-
-.right-button{
-  right: 5%;
-}
-
-
 .slide {
   opacity: 0;
   transition-duration: 1s ease;
