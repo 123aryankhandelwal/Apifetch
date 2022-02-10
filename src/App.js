@@ -5,7 +5,7 @@ import Corousel from "./Components/Corousel";
 // import ImageSlider from './Components/ImageSlider';
 import Navbar from "./Components/Navbar";
 import Product from "./Components/productDetails";
-import Products from "./Components/products";
+import Products from "./Components/Products";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CarouselData } from "./CarouselData";
-import Product from "./products";
+import Product from "./Products";
 
 export default function Corousel() {
   const [current, setCurrent] = useState(0);
