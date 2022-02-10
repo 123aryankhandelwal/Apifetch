@@ -17,7 +17,7 @@ body{
 }
 
 .carousel{
-  width: 700px;
+  width: 550px;
   height: 500px;
   display: flex;
   align-items: center;
@@ -83,5 +83,6 @@ button:hover{
   bottom: 20%;
   left: 10%;
   text-align: center;
-  color: #fff;
+  color:beige;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

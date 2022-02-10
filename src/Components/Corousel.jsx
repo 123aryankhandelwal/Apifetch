@@ -15,28 +15,30 @@ export default function Corousel() {
   };
   return (
     <>
-    <div className="carousel">
-      {CarouselData.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === current && (
-              <img src={slide.image} key={slide.id} alt={slide.text} />
-            )}
-            {index === current && <h1 className="text">{slide.text}</h1>}
-          </div>
-        );
-      })}
-      <button id="button1" className="left-button" onClick={prev}>
-        &lt;
-      </button>
-      <button id="button2" className="right-button" onClick={next}>
-        &gt;
-      </button>
-    </div>
-    <Product />
+      <div className="carousel">
+        {CarouselData.map((slide, index) => {
+          return (
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === current && (
+                <img src={slide.image} key={slide.id} alt={slide.text} />
+              )}
+              {index === current && <h1 className="text">{slide.text}</h1>}
+            </div>
+          );
+        })}
+        <span>
+          <button id="button1" className="left-button" onClick={prev}>
+            &lt;
+          </button>
+          <button id="button2" className="right-button" onClick={next}>
+            &gt;
+          </button>
+        </span>
+      </div>
+      <Product />
     </>
   );
 }

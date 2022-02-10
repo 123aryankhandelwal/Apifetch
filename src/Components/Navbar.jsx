@@ -11,7 +11,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-primary bg-dark shadow-sm py-3">
         <div className="container ">
           <NavLink className="navbar-brand fw-bold" to="/">
-            QUICK-STORE
+            QUICK-ISTORE
           </NavLink>
           <button
             className="navbar-toggler"

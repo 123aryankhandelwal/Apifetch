@@ -59,7 +59,7 @@ const Product = () => {
           </h2>
         </div>
         <div className="col-md-12 text-center mb-3">
-          <a href="#"
+          <a
             className="btn btn-outline-dark me-2 mt-2"
             onClick={() => {
               setFilter(data);
@@ -68,7 +68,7 @@ const Product = () => {
             All Products
           </a>
           <a
-            href="#"
+            
             className="btn btn-outline-dark mt-2 me-2"
             onClick={() => {
               filterProduct("women's clothing");
@@ -77,7 +77,7 @@ const Product = () => {
             Women's Clothes{" "}
           </a>
           <a
-            href="#"
+            
             className="btn btn-outline-dark mt-2 me-2"
             onClick={() => {
               filterProduct("men's clothing");
@@ -87,7 +87,7 @@ const Product = () => {
           </a>
 
           <a
-            href="#"
+            
             className="btn btn-outline-dark mt-2 me-2"
             onClick={() => {
               filterProduct("jewelery");
@@ -96,7 +96,7 @@ const Product = () => {
             Jewelery{" "}
           </a>
           <a
-            href="#"
+            
             className="btn btn-outline-dark mt-2"
             onClick={() => {
               filterProduct("electronics");
